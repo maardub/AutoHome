@@ -1,0 +1,198 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="192x192" href="icon1.png">
+	<link rel="apple-touch-icon" href="/icon1.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>AutoHome</title>
+	
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+</head>
+<body>
+    
+<script type="text/javascript">
+$( document ).ready(function() {
+        $.get("1state.php", function(data){
+            if(data === "on" && !$('#one').checked){
+                $('#one').prop('checked', true);
+            } else if(data === "off" && $('#one').checked){
+                $('#one').prop('checked', false);
+            }
+        });
+
+        $.get("2state.php", function(data){
+            if(data === "on" && !$('#two').checked){
+                $('#two').prop('checked', true);
+            } else if(data === "off" && $('#two').checked){
+                $('#two').prop('checked', false);
+            }
+        });
+
+        $.get("3state.php", function(data){
+            if(data === "on" && !$('#three').checked){
+                $('#three').prop('checked', true);
+            } else if(data === "off" && $('#three').checked){
+                $('#three').prop('checked', false);
+            }
+        });
+});
+</script>
+
+<script type="text/javascript">
+setInterval(function(){
+        $.get("1state.php", function(data){
+            if(data === "on" && !$('#one').checked){
+                $('#one').prop('checked', true);
+            } else if(data === "off" && $('#one').checked){
+                $('#one').prop('checked', false);
+            }
+        });
+
+        $.get("2state.php", function(data){
+            if(data === "on" && !$('#two').checked){
+                $('#two').prop('checked', true);
+            } else if(data === "off" && $('#two').checked){
+                $('#two').prop('checked', false);
+            }
+        });
+
+        $.get("3state.php", function(data){
+            if(data === "on" && !$('#three').checked){
+                $('#three').prop('checked', true);
+            } else if(data === "off" && $('#three').checked){
+                $('#three').prop('checked', false);
+            }
+        });
+    }, 10000);
+</script>
+
+	<h1 class="inset-text-effect">Home Automation</h1>
+	<div class="spacer"></div>
+	<div class="box">
+		<div class="description">Living Room</div>
+		<div class="buttoncontainer">
+			<div class="onoffswitch">
+				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="one">
+				<label class="onoffswitch-label" for="one">
+					<span class="onoffswitch-inner"></span>
+					<span class="onoffswitch-switch"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="spacer"></div>
+	<div class="box">
+		<div class="description">Bedroom - Accent Lamp</div>
+		<div class="buttoncontainer">
+			<div class="onoffswitch">
+				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="two">
+				<label class="onoffswitch-label" for="two">
+					<span class="onoffswitch-inner"></span>
+					<span class="onoffswitch-switch"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+		<div class="spacer"></div>
+	<div class="box">
+		<div class="description">Bedroom - Side Lamp</div>
+		<div class="buttoncontainer">
+			<div class="onoffswitch">
+				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="three">
+				<label class="onoffswitch-label" for="three">
+					<span class="onoffswitch-inner"></span>
+					<span class="onoffswitch-switch"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+		
+	<script type="text/javascript">
+
+	$('#one').change(function(){
+		if(this.checked){
+			$.ajax({
+				url: 'change.php',
+				type: "GET",
+				data: 'one=ON',
+				success: function (data) {
+				},
+				error: function () {
+					alert("We are sorry, but a server error has occured.")
+				}
+			});
+		} else {
+			$.ajax({
+				url: 'change.php',
+				type: "GET",
+				data: 'one=OFF',
+				success: function (data) {
+				},
+				error: function () {
+					alert("We are sorry, but a server error has occured.")
+				}
+			});
+		}
+		return false;
+	});
+		$('#two').change(function(){
+		if(this.checked){
+			$.ajax({
+				url: 'change.php',
+				type: "GET",
+				data: 'two=ON',
+				success: function (data) {
+				},
+				error: function () {
+					alert("We are sorry, but a server error has occured.")
+				}
+			});
+		} else {
+			$.ajax({
+				url: 'change.php',
+				type: "GET",
+				data: 'two=OFF',
+				success: function (data) {
+				},
+				error: function () {
+					alert("We are sorry, but a server error has occured.")
+				}
+			});
+		}
+		return false;
+	});
+		$('#three').change(function(){
+		if(this.checked){
+			$.ajax({
+				url: 'change.php',
+				type: "GET",
+				data: 'three=ON',
+				success: function (data) {
+				},
+				error: function () {
+					alert("We are sorry, but a server error has occured.")
+				}
+			});
+		} else {
+			$.ajax({
+				url: 'change.php',
+				type: "GET",
+				data: 'three=OFF',
+				success: function (data) {
+				},
+				error: function () {
+					alert("We are sorry, but a server error has occured.")
+				}
+			});
+		}
+		return false;
+	});
+	</script>
+	
+
+</body>
+</html>
