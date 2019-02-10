@@ -49,7 +49,9 @@ outlet | outletstate
 1. Rename `db_info.php.example` to `db_info.php` and add your DB login info
 1. Start the apache server
 1. On a smartphone, navigate to the Pi's IP, then add to home screen
-1. Tap the icon on your home screen
+1. Tap the new icon on your home screen  
+
+![User_Interface](http://i67.tinypic.com/2ylmbyg.png)
 
 ### Disclaimer
 I **DO NOT** recommend putting this on the internet via port-forwarding, firewall allowance, or any other method. This is a tinkerer project, so have fun with it, but don't get crazy.
