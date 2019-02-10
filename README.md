@@ -34,13 +34,12 @@ At some point, I found myself to be a burgeoning Computer Science major who poss
 1. Create mysql `state` DB with `outlets` table
   1. `outlet`
   1. `outletstate`
-1. Initialize the `outlets` table
-| outlet | outletstate |
-| ------ | ------------- |
-| 'one' | 'off' |
-| 'two' | 'off' |
-| 'three' | 'off' |
-
+1. Initialize the `outlets` table  
+outlet | outletstate
+------ | -----------
+'one' | 'off'
+'two' | 'off'
+'three' | 'off'
 1. Clone this repo into your apache DocumentRoot
 1. Rename `db_info.php.example` to `db_info.php` and add your DB login info
 1. Start the apache server
