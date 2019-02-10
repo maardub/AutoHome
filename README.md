@@ -18,12 +18,12 @@ At some point, I found myself to be a burgeoning Computer Science major who poss
 #### Hardware
 1. Set up your Pi (There are many sites with great tutorials)
 1. Connect jumper wires from the following pins to the 5V relay inputs
-   1. Pin 15
-   1. Pin 1
-   1. Pin 6
-   1. Pin 11
-   1. Pin 27
-   1. Pin 29
+   * Pin 15
+   * Pin 1
+   * Pin 6
+   * Pin 11
+   * Pin 27
+   * Pin 29
 1. Connect a jumper wire from one of the Pi's GRND pins to the GRND pin on the relay array
 1. Connect a jumper wire from the Pi's 5V pin to the VCC pin on the relay array
 1. Follow the traces on the RF Remote to determine the on/off buttons for each outlet
@@ -32,8 +32,8 @@ At some point, I found myself to be a burgeoning Computer Science major who poss
 #### Software
 1. Install apache, mysql, php, and php_apache_mod
 1. Create mysql `state` DB with `outlets` table
-   1. `outlet`
-   1. `outletstate`
+   * `outlet`
+   * `outletstate`
 1. Initialize the `outlets` table  
 
 outlet | outletstate
