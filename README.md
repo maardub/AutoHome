@@ -1,4 +1,5 @@
 # AutoHome
+![Final_Product](http://i66.tinypic.com/9jmvis.jpg)
 
 ### Description
 Operate outlets via wifi by hardwiring the corresponding RF remote to your Raspberry Pi.
