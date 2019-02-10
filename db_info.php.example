@@ -1,0 +1,8 @@
+<?php
+
+$servername = "localhost";
+$username = "DB_USER";
+$password = "DB_PASSWORD";
+$dbname = "state";
+
+?>
