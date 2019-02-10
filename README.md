@@ -35,6 +35,7 @@ At some point, I found myself to be a burgeoning Computer Science major who poss
   1. `outlet`
   1. `outletstate`
 1. Initialize the `outlets` table  
+
 outlet | outletstate
 ------ | -----------
 'one' | 'off'
